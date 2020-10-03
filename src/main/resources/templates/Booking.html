@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kino XP - Demo</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="icon" href="https://icon-library.com/images/movie-icon-png/movie-icon-png-2.jpg">
+</head>
+<body>
+<!--NAVIGATION BAR-->
+<nav id="burger">
+    <input type="checkbox" id="burger-checkbox" />
+    <label class="menu--toggle__trigger" for="burger-checkbox"></label>
+    <label class="menu--toggle__burger" for="burger-checkbox"></label>
+
+    <ul>
+        <li>
+            <a href="/" class="nav-item">Forside</a>
+        </li>
+        <li>
+            <a href="/" class="nav-item">book</a>
+        </li>
+        <li id="navlogo">
+            <a href="/">
+                <img src="https://icon-library.com/images/movie-icon-png/movie-icon-png-2.jpg" id="logo" />
+            </a>
+        </li>
+        <li>
+            <a href="/" class="nav-item">Om os</a>
+        </li>
+        <li>
+            <a href="/" class="nav-item">afbestil</a>
+        </li>
+    </ul>
+</nav>
+<main>
+    <div class="dropdown">
+        <div class="dropdown-content">
+            <select class="seats" id="seats" multiple>
+                <option value="seat 1">Seat 1</option>
+                <option value="seat 2">Seat 2</option>
+            </select>
+            <button type="submit">Submit</button> //Lav forbindelse til database tak :)
+        </div>
+
+
+    </div>
+
+</main>
+
+</body>
+</html>

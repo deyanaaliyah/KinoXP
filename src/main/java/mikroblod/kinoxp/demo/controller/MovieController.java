@@ -41,4 +41,9 @@ public class MovieController {
         movieRepository.create(newMovie);
         return "index";
     }
+
+    @GetMapping("/Booking")
+    public String Booking(){
+        return "Booking";
+    }
 }
