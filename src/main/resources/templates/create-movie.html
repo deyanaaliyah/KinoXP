@@ -7,25 +7,35 @@
         <link rel="stylesheet" href="/styles.css" />
     </head>
     <body>
-    <!-- HEADER -->
-    <header>
-    <nav id="navigation">
+    <!--NAVIGATION BAR-->
+    <nav id="burger">
+        <input type="checkbox" id="burger-checkbox" />
+        <label class="menu--toggle__trigger" for="burger-checkbox"></label>
+        <label class="menu--toggle__burger" for="burger-checkbox"></label>
+
         <ul>
             <li>
-                <a href="/create-movie" class="link">movies</a>
+                <a href="/" class="nav-item">Forside</a>
             </li>
             <li>
+                <a href="/" class="nav-item">book</a>
+            </li>
+            <li id="navlogo">
                 <a href="/">
-                    <img id="logo" src="https://icon-library.com/images/movie-icon-png/movie-icon-png-2.jpg"/>
+                    <img
+                            src="https://icon-library.com/images/movie-icon-png/movie-icon-png-2.jpg"
+                            id="logo"
+                    />
                 </a>
             </li>
             <li>
-                <a href="/" class="link">log in</a>
+                <a href="/" class="nav-item">Om os</a>
+            </li>
+            <li>
+                <a href="/" class="nav-item">afbestil</a>
             </li>
         </ul>
     </nav>
-    <br />
-    </header>
     <!-- MAIN -->
     <main>
         <div class="movie-container">
