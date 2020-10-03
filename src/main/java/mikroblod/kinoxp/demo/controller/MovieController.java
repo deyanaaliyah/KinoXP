@@ -26,7 +26,7 @@ public class MovieController {
     }
 
     //Create a Movie request
-    @GetMapping("create-movie")
+    @GetMapping("/create-movie")
     public String createMovie(Model model)
     {
         Movie movie = new Movie();
@@ -34,7 +34,7 @@ public class MovieController {
         return "create-movie";
     }
     //Allows input request about creating a movies
-    @PostMapping("create-movie")
+    @PostMapping("/create-movie")
     public String createdMovie(@ModelAttribute Movie newMovie)
     {
         //Adds the created movie to the database
