@@ -43,29 +43,29 @@
             <div class="createMovieTable">
                 <form th:action="@{/create-movie}" method="POST">
                     <label for="movieTitle">TITLE</label>
-                    <input  th:field="*{newMovie.title}"  id="movieTitle" name="mTitle" type="text" placeholder="Insert movie title" required>
+                    <input  th:field="*{newMovie.title}"  id="movieTitle" name="mTitle" type="text" placeholder="Insert movie title..." required>
 
                     <label for="movieGenre">GENRE</label>
-                    <input th:field="*{newMovie.genre}" id="movieGenre" name="mGenre" type="text" placeholder="Insert movie genre" required>
+                    <input th:field="*{newMovie.genre}" id="movieGenre" name="mGenre" type="text" placeholder="Insert movie genre..." required>
 
                     <label for="movieRunningTime">RUNNING TIME</label>
-                    <input th:field="*{newMovie.runningTime}" id="movieRunningTime" name="mRunningTime" type="text" placeholder="Insert movie running time" required>
+                    <input th:field="*{newMovie.runningTime}" id="movieRunningTime" name="mRunningTime" type="text" placeholder="Insert movie running time..." required>
 
                     <label for="movieReleaseDate">RELEASE DATE</label>
-                    <input th:field="*{newMovie.releaseDate}" id="movieReleaseDate" name="mReleaseDate" type="text" placeholder="Insert movie release date" required>
+                    <input th:field="*{newMovie.releaseDate}" id="movieReleaseDate" name="mReleaseDate" type="text" placeholder="Insert movie release date..." required>
 
                     <label for="movieSeatings">SEATINGS</label>
-                    <input th:field="*{newMovie.seatings}" id="movieSeatings" name="mSeatings" type="number" placeholder="Insert movie seatings" required>
+                    <input th:field="*{newMovie.seatings}" id="movieSeatings" name="mSeatings" type="number" placeholder="Insert movie seatings..." required>
 
                     <label for="movieBio">BIO</label>
-                    <input th:field="*{newMovie.bio}" id="movieBio" name="mBio" type="text" placeholder="Insert Bio" required>
+                    <input th:field="*{newMovie.bio}" id="movieBio" name="mBio" type="text" placeholder="Insert bio..." required>
 
                     <label for="movieAgeLimit">AGE LIMIT</label>
-                    <input th:field="*{newMovie.ageLimit}" id="movieAgeLimit" name="mAgeLimit" type="number" placeholder="Insert age limit" required>
+                    <input th:field="*{newMovie.ageLimit}" id="movieAgeLimit" name="mAgeLimit" type="number" placeholder="Insert age limit..." required>
 
                     <label for="movieImageLink">MOVIE IMAGE LINK</label>
-                    <input th:field="*{newMovie.imageLink}" id="movieImageLink" name="mImageLink" type="text" placeholder="Insert movie image link" required>
-                    <div>
+                    <input th:field="*{newMovie.imageLink}" id="movieImageLink" name="mImageLink" type="text" placeholder="Insert movie image link..." required>
+                    <div id="btn-field">
                         <a href="/"><button id="submitBtn" name="subBtn" type="submit" >Submit</button></a>
                     </div>
                 </form>

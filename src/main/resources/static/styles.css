@@ -223,23 +223,30 @@ footer {
     margin-bottom: 1%;
     width: 50%;
     padding: 15px;
-    border-width: 2px;
-    border-style: solid;
+    border: unset;
     border-radius: 5px;
-    border-color: #fc6e51;
+    border-bottom: 4px solid #fc6e51;
 }
 
 #movieBio{
     line-height: 2.6;
 }
-
+#btn-field{
+    width: 10%;
+    margin-left: auto;
+    margin-right: auto;
+}
 #submitBtn{
     border-radius: 5px;
-    width: 10%;
+    border: none;
+    width: 100%;
     padding: 10px;
     float: right;
     margin: 1% 1%;
-    border-color: #fc6e51;
+    background-color: #3ffc62bf;
+    color: #ffffff;
+    font-weight: 900;
+    text-transform: uppercase;
 }
 /* --------------- /CREATE ---------------*/
 /* --------------- /FOOTER -------------------*/
