@@ -1,6 +1,5 @@
 package mikroblod.kinoxp.demo.controller;
 
-import mikroblod.kinoxp.demo.model.IMovie;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;

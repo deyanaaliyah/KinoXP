@@ -1,6 +1,5 @@
 package mikroblod.kinoxp.demo.repository;
 
-import mikroblod.kinoxp.demo.model.IMovie;
 import mikroblod.kinoxp.demo.model.Movie;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -11,11 +10,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Repository
-public class MovieDBRepository implements IMovie {
+public class MovieDBRepository implements IMovieRepository {
 
     @Autowired
     JdbcTemplate jdbcTemplate;
     SqlRowSet sqlRowSet;
+
+    @Override
+    public void create(Movie m) {
+
+    }
 
     @Override
     public Movie read(int id) {
