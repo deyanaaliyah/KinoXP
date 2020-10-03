@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Kino XP - Demo</title>
+        <link rel="stylesheet" href="/style.css" />
+    </head>
+    <body>
+    <!-- HEADER -->
+    <header>
+    <nav id="navigation">
+        <ul>
+            <li>
+                <a href="/create-movie" class="link">movies</a>
+            </li>
+            <li>
+                <a href="/">
+                    <img id="logo" src="https://icon-library.com/images/movie-icon-png/movie-icon-png-2.jpg"/>
+                </a>
+            </li>
+            <li>
+                <a href="/" class="link">log in</a>
+            </li>
+        </ul>
+    </nav>
+    <br />
+    </header>
+    <!-- MAIN -->
+    <main>
+        <div class="movie-container">
+            <div>
+                <h1>Add New Movie</h1>
+            </div>
+            <div class="createMovieTable">
+                <form th:action="@{/create-movie}" method="POST">
+                    <label for="movieTitle">TITLE</label>
+                    <input  th:field="*{newMovie.title}"  id="movieTitle" name="mTitle" type="text" placeholder="Insert movie title" required>
+
+                    <label for="movieGenre">GENRE</label>
+                    <input th:field="*{newMovie.genre}" id="movieGenre" name="mGenre" type="text" placeholder="Insert movie genre" required>
+
+                    <label for="movieRunningTime">RUNNING TIME</label>
+                    <input th:field="*{newMovie.runningTime}" id="movieRunningTime" name="mRunningTime" type="text" placeholder="Insert movie running time" required>
+
+                    <label for="movieReleaseDate">RELEASE DATE</label>
+                    <input th:field="*{newMovie.releaseDate}" id="movieReleaseDate" name="mReleaseDate" type="text" placeholder="Insert movie release date" required>
+
+                    <label for="movieSeatings">SEATINGS</label>
+                    <input th:field="*{newMovie.seatings}" id="movieSeatings" name="mSeatings" type="number" placeholder="Insert movie seatings" required>
+
+                    <label for="movieBio">BIO</label>
+                    <input th:field="*{newMovie.bio}" id="movieBio" name="mBio" type="text" placeholder="Insert Bio" required>
+
+                    <label for="movieAgeLimit">AGE LIMIT</label>
+                    <input th:field="*{newMovie.ageLimit}" id="movieAgeLimit" name="mAgeLimit" type="number" placeholder="Insert age limit" required>
+
+                    <label for="movieImageLink">MOVIE IMAGE LINK</label>
+                    <input th:field="*{newMovie.imageLink}" id="movieImageLink" name="mImageLink" type="text" placeholder="Insert movie image link" required>
+                    <div>
+                        <a href="/"><button id="submitBtn" name="subBtn" type="submit" >Submit</button></a>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </main>
+    </body>
+</html>

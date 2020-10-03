@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+body {
+    font-size: 5vw;
+    font-family: "Roboto", sans-serif;
+    color: #eeeeee;
+    background: rgb(36, 43, 52);
+    background: linear-gradient(
+            297deg,
+            rgba(36, 43, 52, 1) 9%,
+            rgba(34, 40, 49, 1) 84%
+    );
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+nav {
+    width: 100%;
+    padding: 3px;
+    background-color: #393e46;
+    border: 3.5px solid #eeeeee0c;
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    height: 200px;
+}
+#navigation {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+nav ul li {
+    display: inline;
+    list-style: none;
+    font-size: initial;
+}
+nav ul {
+    width: 33.333%;
+    margin-left: auto;
+    margin-right: auto;
+}
+a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: inherit;
+    width: 80%;
+}
+.link:hover {
+    border-bottom: 3px solid #eeeeee;
+}
+#logo {
+    border: 9px solid #eeeeee;
+    border-radius: 100%;
+    width: 20%;
+}
+
+.movie-container {
+    margin: 10px;
+    padding: 0;
+    white-space: initial;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    margin-top: 150px;
+    background-color: #393e46;
+    border: 3.5px solid #eeeeee0c;
+
+    font-size: small;
+    width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.movie-container h1 {
+    text-transform: uppercase;
+    font-weight: lighter;
+    letter-spacing: -3px;
+    margin: 10px;
+}
+.movie-cover {
+    height: 320px;
+    width: 100%;
+}
+.specific-movie {
+    display: inline-grid;
+
+    width: 220px;
+    margin: 10px;
+}
+.specific-movie h2 {
+    text-transform: uppercase;
+}
+.specific-movie h2:hover {
+    color: #d65a31;
+}
+.movie-mini-header {
+    font-weight: 500;
+}
+                /** Create/Add a movie tabel **/
+.createMovieTable label, input{
+    display: block;
+    margin-left: 24%;
+
+}
+.createMovieTable input {
+    margin-bottom: 1%;
+    width: 50%;
+    padding: 15px;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: #fc6e51;
+}
+
+#movieBio{
+    line-height: 2.6;
+}
+
+#submitBtn{
+    border-radius: 5px;
+    width: 10%;
+    padding: 10px;
+    float: right;
+    margin: 1% 1%;
+    border-color: #fc6e51;
+}

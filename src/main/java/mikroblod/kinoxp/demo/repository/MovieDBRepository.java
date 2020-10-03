@@ -17,8 +17,11 @@ public class MovieDBRepository implements IMovieRepository {
     SqlRowSet sqlRowSet;
 
     @Override
-    public void create(Movie m) {
-
+    public void create(Movie movie) {
+        String sql ="INSERT INTO Movies(title, genre, runningTime, releaseDate, seatings, bio, ageLimit, imageLink) VALUES(?,?,?,?,?,?,?,?)";
+        jdbcTemplate.update(sql,
+                movie.getTitle(), movie.getGenre(), movie.getRunningTime(),movie.getReleaseDate(),
+                movie.getSeatings(), movie.getBio(), movie.getAgeLimit(), movie.getImageLink());
     }
 
     @Override
