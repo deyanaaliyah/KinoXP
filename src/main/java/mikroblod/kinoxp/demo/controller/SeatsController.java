@@ -27,7 +27,7 @@ ISeatsRepository seatsRepository;
     public String createSeats(Model model)
     {
         Seats seats = new Seats();
-        model.addAttribute("newSeat", seats);
+        model.addAttribute("newSeats", seats);
         return "Booking";
     }
     //Allows input request about creating a movies

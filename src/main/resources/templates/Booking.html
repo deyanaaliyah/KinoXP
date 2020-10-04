@@ -36,18 +36,16 @@
 </nav>
 <main>
     <div class="dropdown">
-        <div class="dropdown-content" th:action="@{/create-seat}">
-            <select class="seats" id="seats" multiple>
-                <option value="seat 1" th:field="*{newSeat.id}">Seat 1</option>
-                <option value="seat 2" th:field="*{newSeat.id}">Seat 2</option>
-            </select>
-           <a href="/"><button type="submit">Submit</button> </a> //Lav forbindelse til database tak :)
+        <div class="dropdown-content">
+            <form th:action="@{/create-seat}" method="post">
+                <select class="seats" id="seats">
+                    <option value="seat1" th:field="*{newSeats.seatName}">Seat 1</option>
+                    <option value="seat2" th:field="*{newSeats.seatName}">Seat 2</option>
+                </select>
+                <a href="/"><button type="submit">Submit</button> </a> //Lav forbindelse til database tak :)
+            </form>
         </div>
-
-
     </div>
-
 </main>
-
 </body>
 </html>
