@@ -42,8 +42,5 @@ public class MovieController {
         return "index";
     }
 
-    @GetMapping("/Booking")
-    public String Booking(){
-        return "Booking";
-    }
+
 }
