@@ -18,9 +18,9 @@ ISeatsRepository seatsRepository;
         this.seatsRepository = seatsRepository;
     }
 
-    @GetMapping("/Booking")
+    @GetMapping("/booking")
     public String Booking(){
-        return "Booking";
+        return "booking";
     }
 
     @GetMapping("/create-seat")
@@ -28,7 +28,7 @@ ISeatsRepository seatsRepository;
     {
         Seats seats = new Seats();
         model.addAttribute("newSeats", seats);
-        return "Booking";
+        return "booking";
     }
     //Allows input request about creating a movies
     @PostMapping("/create-seat")
