@@ -23,7 +23,7 @@
         </li>
         <li id="navlogo">
             <a href="/">
-                <img src="https://icon-library.com/images/movie-icon-png/movie-icon-png-2.jpg" id="logo" />
+                <img src="https://icon-library.com/images/movie-icon-png/movie-icon-png-2.jpg" id="logo" alt="kinoXP_logo"/>
             </a>
         </li>
         <li>
@@ -37,12 +37,12 @@
 <main>
     <div class="dropdown">
         <div class="dropdown-content">
-            <form th:action="@{/create-seat}" method="post">
-                <select class="seats" id="seats">
-                    <option value="seat1" th:field="*{newSeats.seatName}">Seat 1</option>
-                    <option value="seat2" th:field="*{newSeats.seatName}">Seat 2</option>
+            <form th:action="@{/create-seat}" method="post" >
+                <label for="pickSeats" id="seatSelect">Select seat</label>
+                <select th:field="*{newSeats.seatName}" class="seats" id="pickSeats">
+                    <option th:each="i : ${#numbers.sequence(0, 150)}" th:value="Seat-+${i}" th:text="seat+${i}" th:selected="${i==75}"></option>
                 </select>
-                <a href="/"><button type="submit">Submit</button> </a> //Lav forbindelse til database tak :)
+                <a href="/"><button type="submit">Submit</button> </a>
             </form>
         </div>
     </div>
