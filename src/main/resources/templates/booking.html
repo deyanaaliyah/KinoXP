@@ -35,16 +35,31 @@
     </ul>
 </nav>
 <main>
-    <div class="dropdown">
-        <div class="dropdown-content">
-            <form th:action="@{/create-seat}" method="post" >
-                <label for="pickSeats" id="seatSelect">Select seat</label>
-                <select th:field="*{newSeats.seatName}" class="seats" id="pickSeats">
-                    <option th:each="i : ${#numbers.sequence(0, 150)}" th:value="Seat-+${i}" th:text="seat+${i}" th:selected="${i==75}"></option>
+    <div class="customerBookingForm">
+        <form th:action="@{/create-booking}" method="post">
+            <label for="custFname">First name</label>
+            <input th:field="*{newCustomer.fName}" id="custFname" type="text" placeholder="Insert first name" required>
+
+            <label for="custLname">Last Name</label>
+            <input th:field="*{newCustomer.lName}" id="custLname" type="text" placeholder="Insert last name" required>
+
+            <label for="custBirthday">Birthday</label>
+            <input th:field="*{newCustomer.birthday}" id="custBirthday" type="text" placeholder="Insert birthday 01-01-1900">
+
+            <label for="custPhoneNo">Phone Number</label>
+            <input th:field="*{newCustomer.phoneNumber}" id="custPhoneNo" type="text" placeholder="Insert phone number">
+
+            <label for="custEmail">E-Mail</label>
+            <input th:field="*{newCustomer.email}" id="custEmail" type="text" placeholder="Insert e-mail" required>
+
+            <div class="dropdown">
+                <label for="selectSeat" id="seatSelect">Select seat</label>
+                <select th:field="*{newSeats.seatName}" class="seatDropdown" id="selectSeat">
+                    <option th:each="i : ${#numbers.sequence(0, 150)}" th:value="Seat-+${i}" th:text="Seat-+${i}" th:selected="${i==75}"></option>
                 </select>
-                <a href="/"><button type="submit">Submit</button> </a>
-            </form>
-        </div>
+            </div>
+            <a href="/"><button type="submit">Submit</button> </a>
+        </form>
     </div>
 </main>
 </body>

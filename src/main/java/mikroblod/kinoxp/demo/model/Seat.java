@@ -1,16 +1,16 @@
 package mikroblod.kinoxp.demo.model;
 
-public class Seats {
+public class Seat {
     private int id;
     private String seatName;
 
 
 
-    public Seats(int id, String seatName) {
+    public Seat(int id, String seatName) {
         this.id = id;
         this.seatName = seatName;
     }
-    public Seats() {
+    public Seat() {
     }
     public String getSeatName() {
         return seatName;

@@ -341,4 +341,19 @@ footer {
     #slideshow {
         width: 100%;
     }
+
+    /* --------------- CREATE ---------------*/
+    /* --------------- SELECT SEATS ------------*/
+
+   .seatDropdown {
+        display: inline-block;
+        height: 30px;
+        width: 150px;
+        outline: none;
+        color: #74646e;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 1px 1px 2px #999;
+        background: #eee;
+    }
 }

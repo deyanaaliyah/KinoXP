@@ -31,7 +31,7 @@ public class MovieController {
     {
         Movie movie = new Movie();
         model.addAttribute("newMovie", movie);
-        return "create-movie";
+        return "create_movie";
     }
     //Allows input request about creating a movies
     @PostMapping("/create-movie")

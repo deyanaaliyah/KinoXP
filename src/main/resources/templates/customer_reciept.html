@@ -1,9 +1,10 @@
+<!DOCTYPE>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kino XP - Demo</title>
-    <link rel="stylesheet" href="/styles.css" />
+    <title>Receipt</title>
+    <link rel="stylesheet" href="/static/styles.css" />
     <link rel="icon" href="https://icon-library.com/images/movie-icon-png/movie-icon-png-2.jpg">
 </head>
 <body>
@@ -33,9 +34,30 @@
         </li>
     </ul>
 </nav>
-    <a href="/" style="color: white">home</a> <br>
-    <a href="/booking" style="color: white">booking</a> <br>
-    <a href="/create-booking" style="color: white">create seat</a> <br>
-    <a href="create-movie" style="color: white">create movie</a> <br>
+<!-- MAIN -->
+<div>
+    <h2>Reciept</h2>
+</div>
+<div th:each="customer : ${customers}">
+    <label>Customer information</label>
+    <table>
+        <thead>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Birthday</th>
+            <th>Phone number</th>
+            <th>E-mail</th>
+            <th>Seats</th>
+        </thead>
+        <tbody th:each="seat : ${seats}">
+            <td th:text="${customer.fName}"></td>
+            <td th:text="${customer.lName}"></td>
+            <td th:text="${customer.birthday"></td>
+            <td th:text="${customer.phoneNumber"></td>
+            <td th:text="${customer.email}"></td>
+            <td th:text="${seat.seatName}"></td>
+        </tbody>
+    </table>
+</div>
 </body>
 </html>
