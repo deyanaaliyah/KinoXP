@@ -9,6 +9,18 @@ public class Person {
     private int phoneNumber;
     private String email;
 
+    public Person(){}
+
+
+    public Person(int id, String fName, String lName, String birthday, int phoneNumber, String email) {
+        this.id = id;
+        this.fName = fName;
+        this.lName = lName;
+        this.birthday = birthday;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+    }
+
     public int getId() {
         return id;
     }
