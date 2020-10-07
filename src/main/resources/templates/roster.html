@@ -12,6 +12,7 @@
      <div>
          <table class="overviewTable">
              <tr>
+                 <th>      </th>
                  <th>Mandag</th>
                  <th>Tirsdag</th>
                  <th>Onsdag</th>
@@ -22,16 +23,33 @@
 
              </tr>
 
-             <tr>
-                 <td>Jill</td>
-                 <td>Smith</td>
-                 <td>50</td>
-             </tr>
+
 
              <tr th:each="r : ${rosterOverview}">
+
+                 <td><p th:text="${r.employeeID}"></p> <p th:text="${r.fname}" ></p><p th:text="${r.lname}"></p></td>
+
+                 <td>06:15</td>
+                 <td>06:15</td>
+                 <td>06:15</td>
+                 <td>06:15</td>
+                 <td>06:15</td>
+                 <td>06:15</td>
+                 <td>06:15</td>
+
+
+             </tr>
+             <tr th:each="r : ${rosterOverview}">
+                 <td><p th:text="${r.employeeID}"></p> <p th:text="${r.fname}" ></p><p th:text="${r.lname}"></p></td>
+             </tr>
+         <!--    <tr th:each="r : ${rosterOverview}">
+                 <td th:text="${r.lname}"></td>
+             </tr>-->
+
+        <!--     <tr th:each="r : ${rosterOverview}">
                  <th th:text="${r.employeeID}"></th>
                  <th th:text="${r.fname}"></th>
-                 <th th:text="${r.lname}"></th>
+                 <th th:text="${r.lname}"></th>-->
 
           <!--       <td id="test">
                      <a th:href="@{/motorhome-detaljer(id=${mh.motorhomeId})}">
@@ -43,9 +61,9 @@
                      <a th:href="@{/slet-motorhome(id=${mh.motorhomeId})}">
                          <button class="TabledetailsBtn deleteBtn">Slet</button>
                      </a>
-                 </td>-->
+                 </td>
 
-             </tr>
+             </tr>-->
          </table>
      </div>
  </main>
