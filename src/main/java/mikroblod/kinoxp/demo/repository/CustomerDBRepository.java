@@ -36,11 +36,12 @@ public class CustomerDBRepository implements ICustomerRepository{
     @Override
     public List<Customer> readAll() {
         List<Customer> customers = new ArrayList<>();
-
+        //Execute the sql statement by sending a sql request to the database
         String sql = "SELECT * FROM Customers";
         sqlRowSet = jdbcTemplate.queryForRowSet(sql);
-
+        //Returns the result of the request from the database
         while (sqlRowSet.next()){
+            //Use the get() method to receive the data and then display it.
             customers.add(new Customer(
                     sqlRowSet.getInt("customer_id"),
                     sqlRowSet.getString("customer_fName"),
