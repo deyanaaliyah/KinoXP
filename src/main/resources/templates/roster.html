@@ -27,7 +27,7 @@
 
              <tr th:each="r : ${rosterOverview}">
 
-                 <td><p th:text="${r.employeeID}"></p> <p th:text="${r.fname}" ></p><p th:text="${r.lname}"></p></td>
+                 <td style="display:inline-flex;" ><p th:text="${r.employeeID}"></p> <p th:text="${r.fname}" ></p><p th:text="${r.lname}"></p></td>
 
                  <td>06:15</td>
                  <td>06:15</td>
@@ -39,9 +39,20 @@
 
 
              </tr>
-             <tr th:each="r : ${rosterOverview}">
-                 <td><p th:text="${r.employeeID}"></p> <p th:text="${r.fname}" ></p><p th:text="${r.lname}"></p></td>
-             </tr>
+      <!--       <tr th:each="r : ${rosterOverview}">
+
+                 <td style="display:inline-flex;" ><p th:text="${r.employeeID}"></p> <p th:text="${r.fname}" ></p><p th:text="${r.lname}"></p></td>
+
+                 <td>06:15</td>
+                 <td>     </td>
+                 <td>15:23</td>
+                 <td>09:15</td>
+                 <td>06:15</td>
+                 <td>06:15</td>
+                 <td>06:15</td>
+
+
+             </tr>-->
          <!--    <tr th:each="r : ${rosterOverview}">
                  <td th:text="${r.lname}"></td>
              </tr>-->
@@ -69,6 +80,10 @@
  </main>
 
   <style>
+
+      p{
+          margin: 2%;
+      }
 
       /*--- table start---*/
       .overviewTable {
