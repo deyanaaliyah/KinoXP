@@ -1,10 +1,9 @@
-<!DOCTYPE>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Receipt</title>
-    <link rel="stylesheet" href="/static/styles.css" />
+    <title>Kino XP - Demo</title>
+    <link rel="stylesheet" href="/styles.css" />
     <link rel="icon" href="https://icon-library.com/images/movie-icon-png/movie-icon-png-2.jpg">
 </head>
 <body>
@@ -19,7 +18,7 @@
             <a href="/" class="nav-item">Forside</a>
         </li>
         <li>
-            <a href="/" class="nav-item">book</a>
+            <a href="/booking" class="nav-item">Book</a>
         </li>
         <li id="navlogo">
             <a href="/">
@@ -30,7 +29,7 @@
             <a href="/" class="nav-item">Om os</a>
         </li>
         <li>
-            <a href="/" class="nav-item">afbestil</a>
+            <a href="/" class="nav-item">Afbestil</a>
         </li>
     </ul>
 </nav>
@@ -38,8 +37,11 @@
 <div>
     <h2>Reciept</h2>
 </div>
-<div th:each="customer : ${customers}">
-    <label>Customer information</label>
+<div>
+    <label>Customer information:</label>
+</div >
+ <!-- <div th:each="customer : ${customers}"> -->
+    <div class="receipt">
     <table>
         <thead>
             <th>First name</th>
@@ -49,15 +51,19 @@
             <th>E-mail</th>
             <th>Seats</th>
         </thead>
+        <!--
         <tbody th:each="seat : ${seats}">
-            <td th:text="${customer.fName}"></td>
-            <td th:text="${customer.lName}"></td>
-            <td th:text="${customer.birthday"></td>
-            <td th:text="${customer.phoneNumber"></td>
-            <td th:text="${customer.email}"></td>
-            <td th:text="${seat.seatName}"></td>
+        <td th:text="${customer.fName}"></td>
+        <td th:text="${customer.lName}"></td>
+        <td th:text="${customer.birthday"></td>
+        <td th:text="${customer.phoneNumber"></td>
+        <td th:text="${customer.email}"></td>
+        <td th:text="${seat.seatName}"></td>
         </tbody>
+        -->
     </table>
-</div>
+    </div>
+
+ <!-- </div> -->
 </body>
 </html>

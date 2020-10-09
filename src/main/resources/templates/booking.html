@@ -19,7 +19,7 @@
             <a href="/" class="nav-item">Forside</a>
         </li>
         <li>
-            <a href="/" class="nav-item">book</a>
+            <a href="/booking" class="nav-item">book</a>
         </li>
         <li id="navlogo">
             <a href="/">
@@ -36,7 +36,7 @@
 </nav>
 <main>
     <div class="customerBookingForm">
-        <form th:action="@{/create-booking}" method="post">
+        <form th:action="@{/booking}" method="post">
             <label for="custFname">First name</label>
             <input th:field="*{newCustomer.fName}" id="custFname" type="text" placeholder="Insert first name" required>
 

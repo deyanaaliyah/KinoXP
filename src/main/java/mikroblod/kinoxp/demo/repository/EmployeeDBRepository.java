@@ -26,9 +26,9 @@ public class EmployeeDBRepository implements IEmployeeRepository{
 
         while(sqlRowSet.next()){
             employee.add(new Employee(
-                    sqlRowSet.getInt("employeeID"),
-                    sqlRowSet.getString("fname"),
-                    sqlRowSet.getString("lname")
+                    sqlRowSet.getInt("employee_id"),
+                    sqlRowSet.getString("employee_fname"),
+                    sqlRowSet.getString("employee_lname")
 
             ));
         }

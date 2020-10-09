@@ -2,9 +2,38 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Roster</title>
+    <title>Kino XP - Demo</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="icon" href="https://icon-library.com/images/movie-icon-png/movie-icon-png-2.jpg">
 </head>
 <body>
+<!--NAVIGATION BAR-->
+<nav id="burger">
+    <input type="checkbox" id="burger-checkbox" />
+    <label class="menu--toggle__trigger" for="burger-checkbox"></label>
+    <label class="menu--toggle__burger" for="burger-checkbox"></label>
+
+    <ul>
+        <li>
+            <a href="/" class="nav-item">Forside</a>
+        </li>
+        <li>
+            <a href="/booking" class="nav-item">Book</a>
+        </li>
+        <li id="navlogo">
+            <a href="/">
+                <img src="https://icon-library.com/images/movie-icon-png/movie-icon-png-2.jpg" id="logo" />
+            </a>
+        </li>
+        <li>
+            <a href="/" class="nav-item">Om os</a>
+        </li>
+        <li>
+            <a href="/" class="nav-item">Afbestil</a>
+        </li>
+    </ul>
+</nav>
+<!--MAIN-->
   <main>
      <div class="overskrift">
          <h1> Vagtplan</h1>
@@ -39,42 +68,6 @@
 
 
              </tr>
-      <!--       <tr th:each="r : ${rosterOverview}">
-
-                 <td style="display:inline-flex;" ><p th:text="${r.employeeID}"></p> <p th:text="${r.fname}" ></p><p th:text="${r.lname}"></p></td>
-
-                 <td>06:15</td>
-                 <td>     </td>
-                 <td>15:23</td>
-                 <td>09:15</td>
-                 <td>06:15</td>
-                 <td>06:15</td>
-                 <td>06:15</td>
-
-
-             </tr>-->
-         <!--    <tr th:each="r : ${rosterOverview}">
-                 <td th:text="${r.lname}"></td>
-             </tr>-->
-
-        <!--     <tr th:each="r : ${rosterOverview}">
-                 <th th:text="${r.employeeID}"></th>
-                 <th th:text="${r.fname}"></th>
-                 <th th:text="${r.lname}"></th>-->
-
-          <!--       <td id="test">
-                     <a th:href="@{/motorhome-detaljer(id=${mh.motorhomeId})}">
-                         <button class="TabledetailsBtn detailsBtn">Detaljer</button>
-                     </a>
-                     <a th:href="@{/opdater-motorhome(id=${mh.motorhomeId})}">
-                         <button class="TabledetailsBtn updateBtn">Rediger</button>
-                     </a>
-                     <a th:href="@{/slet-motorhome(id=${mh.motorhomeId})}">
-                         <button class="TabledetailsBtn deleteBtn">Slet</button>
-                     </a>
-                 </td>
-
-             </tr>-->
          </table>
      </div>
  </main>

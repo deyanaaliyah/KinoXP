@@ -356,4 +356,11 @@ footer {
         box-shadow: 1px 1px 2px #999;
         background: #eee;
     }
+
+   /* ------------- receipt --------------*/
+    .receipt, table, thead, th{
+         border-style: solid;
+        border-block: white 2px;
+
+    }
 }

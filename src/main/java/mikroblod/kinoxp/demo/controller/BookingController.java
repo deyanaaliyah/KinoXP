@@ -21,12 +21,8 @@ ICustomerRepository customerRepository;
         this.customerRepository = customerRepository;
     }
 
-    @GetMapping("/booking")
-    public String Booking(){
-        return "booking";
-    }
 
-    @GetMapping("/create-booking")
+    @GetMapping("/booking")
     public String createSeats(Model model)
     {
         Seat seat = new Seat();
@@ -36,7 +32,7 @@ ICustomerRepository customerRepository;
         return "booking";
     }
     //Allows input request about creating a booking
-    @PostMapping("/create-booking")
+    @PostMapping("/booking")
     public String createdSeat(@ModelAttribute Seat newSeat, Customer newCustomer)
     {
         //Adds the created seat to the database
