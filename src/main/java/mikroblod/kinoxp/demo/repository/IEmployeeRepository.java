@@ -7,6 +7,5 @@ import java.util.List;
 public interface IEmployeeRepository {
 
     List<Employee> readAll();
-    }
-
-
+    Employee read(String employeeID);
+}

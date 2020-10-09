@@ -1,40 +1,23 @@
 package mikroblod.kinoxp.demo.model;
 
-import mikroblod.kinoxp.demo.model.Person;
-
 public class Employee extends Person {
 
-    private int employeeID;
-    private String fname;
-    private String lname;
+    private String employee_id;
+    //private String fname;
+    //private String lname;
 
-    public Employee(int employeeID, String fname, String lname) {
-        this.employeeID = employeeID;
-        this.fname = fname;
-        this.lname = lname;
+    public Employee(){
     }
 
-    public int getEmployeeID() {
-        return employeeID;
+    public Employee(String employee_id) {
+        this.employee_id = employee_id;
     }
 
-    public void setEmployeeID(int employeeID) {
-        this.employeeID = employeeID;
+    public String getEmployee_id() {
+        return employee_id;
     }
 
-    public String getFname() {
-        return fname;
-    }
-
-    public void setFname(String fname) {
-        this.fname = fname;
-    }
-
-    public String getLname() {
-        return lname;
-    }
-
-    public void setLname(String lname) {
-        this.lname = lname;
+    public void setEmployee_id(String employee_id) {
+        this.employee_id = employee_id;
     }
 }

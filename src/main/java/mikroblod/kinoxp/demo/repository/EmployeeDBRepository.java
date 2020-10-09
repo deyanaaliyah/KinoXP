@@ -11,11 +11,9 @@ import java.util.List;
 @Repository
 public class EmployeeDBRepository implements IEmployeeRepository{
 
-
-        @Autowired
-        JdbcTemplate jdbcTemplate;
-        SqlRowSet sqlRowSet;
-
+    @Autowired
+    JdbcTemplate jdbcTemplate;
+    SqlRowSet sqlRowSet;
 
     @Override
     public List<Employee> readAll() {
@@ -26,12 +24,40 @@ public class EmployeeDBRepository implements IEmployeeRepository{
 
         while(sqlRowSet.next()){
             employee.add(new Employee(
-                    sqlRowSet.getInt("employee_id"),
-                    sqlRowSet.getString("employee_fname"),
-                    sqlRowSet.getString("employee_lname")
-
-            ));
+                    sqlRowSet.getString("employee_id")
+                    )
+            );
         }
         return employee;
     }
+
+    @Override
+    public Employee read(String employee_id) {
+        String sql = "SELECT * FROM employee WHERE employee_id = '" + employee_id + "'";
+        sqlRowSet = jdbcTemplate.queryForRowSet(sql);
+
+        while(sqlRowSet.next()){
+            return new Employee(sqlRowSet.getString("employee_id"));
+        }
+
+        return null;
+    }
+
+
+    /*  hey gutter
+        copy+paste det her ind til jeres workbench
+
+        CREATE TABLE `Kino`.`employee` (`employee_id` INT NOT NULL, PRIMARY KEY (`employee_id`));
+
+        INSERT INTO kino.employee (employee_id) VALUES (1127);
+        INSERT INTO kino.employee (employee_id) VALUES (4892);
+        INSERT INTO kino.employee (employee_id) VALUES (8704);
+        INSERT INTO kino.employee (employee_id) VALUES (6890);
+        INSERT INTO kino.employee (employee_id) VALUES (2694);
+        INSERT INTO kino.employee (employee_id) VALUES (0944);
+        INSERT INTO kino.employee (employee_id) VALUES (7642);
+        INSERT INTO kino.employee (employee_id) VALUES (0193);
+        INSERT INTO kino.employee (employee_id) VALUES (4790);
+        INSERT INTO kino.employee (employee_id) VALUES (2880);
+     */
 }

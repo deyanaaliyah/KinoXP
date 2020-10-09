@@ -1,0 +1,101 @@
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kino XP - Demo</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="icon" href="https://icon-library.com/images/movie-icon-png/movie-icon-png-2.jpg">
+</head>
+<body>
+<!--NAVIGATION BAR-->
+<nav id="burger">
+    <input type="checkbox" id="burger-checkbox" />
+    <label class="menu--toggle__trigger" for="burger-checkbox"></label>
+    <label class="menu--toggle__burger" for="burger-checkbox"></label>
+
+    <ul>
+        <li>
+            <a href="/" class="nav-item">Forside</a>
+        </li>
+        <li>
+            <a href="/booking" class="nav-item">Book</a>
+        </li>
+        <li id="navlogo">
+            <a href="/">
+                <img src="https://icon-library.com/images/movie-icon-png/movie-icon-png-2.jpg" id="logo" alt="kinoXPlogo"/>
+            </a>
+        </li>
+        <li>
+            <a href="/" class="nav-item">Om os</a>
+        </li>
+        <li>
+            <a href="/" class="nav-item">Afbestil</a>
+        </li>
+    </ul>
+</nav>
+
+<div>
+    <!-- MAIN -->
+    <main>
+        <div class="movie-container">
+            <div>
+                <h1>Employee login</h1>
+            </div>
+            <div class="createMovieTable">
+
+                <form action="/menu" method="POST">
+                    <input type="text" name="employee_id" placeholder="Please enter your Email" >
+                    <input type="text" name="password" placeholder="Enter your password">
+
+                    <button type="submit" class="btn btn-warning">Sign in</button>
+                </form>
+            </div>
+        </div>
+    </main>
+</div>
+
+<footer>
+    <div class="footer-item maps">
+        <h3>Find os!</h3>
+        <div id="maps-hours">
+            <iframe
+                    id="gmap_canvas"
+                    src="https://maps.google.com/maps?q=K%C3%B8benhavns%20Erhversakademi%2C%20Lygten%2037&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                    frameborder="0"
+                    scrolling="no"
+                    marginheight="0"
+                    marginwidth="0"
+            ></iframe>
+        </div>
+    </div>
+    <div class="footer-item footer-logo-class">
+        <br>
+        <a href="/menu">
+            <img src="https://icon-library.com/images/movie-icon-png/movie-icon-png-2.jpg" id="footer-logo" alt="kinoXPlogo">
+        </a>
+        <br>
+        <span>
+            Hverdag<br />
+            <h4>12:00 - 24:00</h4>
+          </span>
+    </div>
+    <div class="footer-item">
+        <h3>Kontakt os!</h3>
+        <br />
+        <p>
+            <a href="tel:+45 12 34 56 78">+45 12 34 56 78</a><br /><br />
+            <a href="https://www.google.com/maps/place/KEA+Copenhagen+School+of+Design+and+Technology+-+K%C3%B8benhavns+Erhvervsakademi/@55.703949,12.5353043,17z/data=!3m1!4b1!4m5!3m4!1s0x4652524912ef2c1b:0x1ebd74bef2cd320!8m2!3d55.703946!4d12.537493">
+                Lygten 37, 2400 København N</a>
+            <br />
+            <br />
+            <a href="/contact-us">Lej en sal til firma</a>
+        </p>
+    </div>
+    <br />
+</footer>
+<p id="copyright">
+    a full stack website by: mikroblød, ©2020 <br>
+    deyan, emil, heritier, mo
+</p>
+</body>
+</html>
